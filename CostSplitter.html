@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Cost Spliter
+		</title>
+		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+		<link rel="stylesheet" href="bootstrap.min.css">
+		<script src="test.js"></script>
+	</head>
+	<body>
+		<div class = "jumbotron" style="padding-bottom:0px;margin-bottom:0px;">
+			<h1>
+				Cost Splitter
+				<small>
+					No need to worry about money. Enjoy!
+				</small>
+			</h1>
+			<form style="background-color:#A9A9A9;padding-top: 20px;">
+				<center>
+					<label>
+							Name
+					</label>
+					<input type="text" id="name">
+					<label>
+						Paid
+					</label>
+					<input type="text" id="paid">
+					<label id="spentL">
+						Spent
+					</label>
+					<input type="text" id="spent"><br><br>
+					<div id="split_check">
+						<input type="checkbox" id ="unequal_split"> Unequal split. <br><br>
+					</div>
+					<button type="button" onclick="add_person()">Add another person</button>
+					<button type="button" onclick="split()">Done</button><br><br>
+				</center>
+			</form>
+		</div>
+		<table border="1" class="table table-hover" style="padding-top: 0px;margin-top: 0px;">
+			<tr>
+				<th>
+					Name
+				</th>
+				<th>
+					Paid
+				</th>
+				<th>
+					Spent
+				</th>
+			</tr>
+		</table>
+		<div class="container">
+			<h2 style="display: none;" id="disp_toggle">
+				Cost distribution:
+			</h2><br>
+			<ul class="list-group" id="myList">
+			</ul>
+		</div>
+	</body>
+</html>
